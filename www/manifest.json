@@ -1,10 +1,10 @@
 {
-  "name": "My Ionic App",
-  "short_name": "My Ionic App",
+  "name": "Pluggy App",
+  "short_name": "Pluggy",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{
-    "src": "icon.png",
+    "src": "img/24MfhqLQDiRjKEVqv4bQ_newnewpaddedIcon.png",
     "sizes": "512x512",
     "type": "image/png"
   }]

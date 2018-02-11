@@ -1,0 +1,23 @@
+<ion-view title="Login" hide-nav-bar="true" id="page11" style="background-color:#2CF06F;">
+  <ion-content padding="true" style="background: url(img/U6fMmqzT9SYc0LZq6pxh_circles-and-roundabouts.png.png) no-repeat center;background-size:cover;" class="manual-ios-statusbar-padding">
+    <div>
+      <img src="img/IABke0cVTwO1dGPgBxeC_paddedIcon.png" style="display: block; width: 70%; margin-left: auto; margin-right: auto;">
+    </div>
+    <form id="login-form9" class="list">
+      <ion-list id="login-list7">
+        <label class="item item-input" id="login-input21">
+          <span class="input-label">Email</span>
+          <input type="email" placeholder="" ng-model="loginEmail">
+        </label>
+        <label class="item item-input" id="login-input22">
+          <span class="input-label">Password</span>
+          <input type="password" placeholder="" ng-model="loginPW">
+        </label>
+      </ion-list>
+      <div class="spacer" style="width: 300px; height: 32px;"></div>
+      <a ui-sref="dashBoard()" id="login-button8" class="button button-balanced button-block">Log in</a>
+      <button ui-sref="oAuthRegistration()" id="login-button17" style="border-radius:3px 3px 3px 3px;" class="button button-assertive button-block icon ion-social-googleplus">&nbsp;&nbsp;Connect Google</button>
+      <a ui-sref="registration()" id="login-button9" class="button button-balanced button-block button-clear">Or create an account</a>
+    </form>
+  </ion-content>
+</ion-view>

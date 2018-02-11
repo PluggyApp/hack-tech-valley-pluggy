@@ -1,0 +1,36 @@
+<ion-view title="DashBoard" hide-nav-bar="true" id="page9">
+  <ion-content padding="true" style="background: url(img/eRQAvn7TA2byeNUxPPac_circles-and-roundabouts.png.png) no-repeat center;background-size:cover;" class="manual-ios-statusbar-padding">
+    <form id="dashBoard-form17" class="list">
+      <label class="item item-input" id="dashBoard-search2">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" placeholder="Address">
+      </label>
+    </form>
+    <div class="list card" id="dashBoard-card24">
+      <ion-item class="item-icon-left balanced" id="dashBoard-list-item32">
+        <i class="icon ion-earth"></i>Search Your Area
+        <ion-option-button class="button-positive"></ion-option-button>
+      </ion-item>
+      <form id="dashBoard-form18" class="list">
+        <creator-map-component options="{}" marker="true" location="Madison Capital" zoom="12" style="display:block;position:relative;width:100%;height:300px;">
+          <ui-gmap-google-map ng-if="map.center" center="map.center" zoom="map.zoom" options="map.options">
+            <ui-gmap-marker coords="map.marker.coords" idkey="map.marker.id" options="map.marker.options"></ui-gmap-marker>
+          </ui-gmap-google-map>
+        </creator-map-component>
+        <ion-item class="range range-positive" id="dashBoard-range3">
+          <span ng-if="!sliderValue">Radius</span>
+          <span ng-if="sliderValue">{{sliderValue | number}} Meters</span>
+          <input type="range" value="1000" min="0" max="10000" step="1" ng-model="sliderValue">
+        </ion-item>
+      </form>
+      <h4 id="dashBoard-heading5" style="color:#000000;text-align:center;">Top Results</h4>
+      <span ng-hide="generatedData()">
+        <button ui-sref="result()" id="dashBoard-button14" style="color:#000000;" class="button button-dark button-block button-icon icon-right ion-chevron-right">Warehouse <span class="gray-text">(2.4 mi)</span></button>
+        <button ui-sref="result()" id="dashBoard-button15" style="color:#000000;" class="button button-positive button-block button-icon icon-right ion-chevron-right">Storefront <span class="gray-text">(5.6 mi)</span></button>
+        <button ui-sref="result()" id="dashBoard-button18" style="color:#000000;" class="button button-positive button-block button-icon icon-right ion-chevron-right">Warehouse <span class="gray-text">(8.6 mi)</span></button>
+      </span>
+    </div>
+    <button ng-click="generateData()" id="dashBoard-button22" style="text-align:left;" class="button button-balanced icon-left ion-chevron-left">Prev</button>
+    <button ng-click="generateData()" id="dashBoard-button23" class="button button-balanced icon-right ion-chevron-right pull-right">Next</button>
+  </ion-content>
+</ion-view>
